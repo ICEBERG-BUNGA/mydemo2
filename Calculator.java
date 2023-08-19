@@ -8,8 +8,8 @@ public class Calculator {
         Scanner scn = new Scanner(System.in);
         System.out.print("Введите выражение: ");
         String exp = scn.nextLine();
-        if( exp.length() > 3) {
-            throw new ScannerException("строка содержит больше трех символов");
+        if( exp.length() > 5) {
+            throw new ScannerException("арифметическим выражение должно быть между двумя числами ");
         }
         int actionIndex=-1;
         for (int i = 0; i < actions.length; i++) {
