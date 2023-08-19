@@ -11,7 +11,6 @@ public class Calculator {
         if( exp.length() > 3) {
             throw new ScannerException("строка содержит больше трех символов");
         }
-        
         int actionIndex=-1;
         for (int i = 0; i < actions.length; i++) {
             if(exp.contains(actions[i])){
@@ -19,36 +18,24 @@ public class Calculator {
                 break;
             }
         }
-        
-
         if(actionIndex==-1){
             throw new ScannerException("Некорректное выражение");
         }
-        
-
-
         String[] data = exp.split(regexActions[actionIndex]);
         
         if(converter.isRoman(data[0]) == converter.isRoman(data[1])){
             int a,b;
-
-            
             boolean isRoman = converter.isRoman(data[0]);
             if(isRoman){
-                //если римские, то конвертируем их в арабские
                 a = converter.romanToInt(data[0]);
                 b = converter.romanToInt(data[1]);
-
             }else{
-                //если арабские, конвертируем их из строки в число
                 a = Integer.parseInt(data[0]);
                 b = Integer.parseInt(data[1]);
             }
             if(a < 1 || b > 10 || a > 10 || b<1 ){
                 throw new ScannerException("нужно вводить от 1 до 10");
-            }
-
-            
+            }  
             int result;
             switch (actions[actionIndex]){
                 case "+":
