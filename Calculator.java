@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Calculator {
+public class Main {
     public static void main(String[] args) throws ScannerException {
         Converter converter = new Converter();
         String[] actions = {"+", "-", "/", "*"};
