@@ -7,7 +7,7 @@ public class Main {public static void main(String[] args) throws ScannerExceptio
     Scanner scn = new Scanner(System.in);
     System.out.print("Введите выражение: ");
     String exp = scn.nextLine();
-    if( exp.length() > 5) {
+    if( exp.length() > 3) {
         throw new ScannerException("арифметическим выражение должно быть между двумя числами");
     }
     int actionIndex=-1;
